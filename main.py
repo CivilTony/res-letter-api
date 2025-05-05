@@ -18,12 +18,14 @@ app.add_middleware(
 # ----------------------
 # 📬 Input Model
 # ----------------------
+
 class LetterInput(BaseModel):
     prompt: str
 
 # ----------------------
 # 📤 Output Model (Optional for stricter validation)
 # ----------------------
+
 class AppendixSection(BaseModel):
     title: str
     content: str
@@ -34,6 +36,8 @@ class LetterResponse(BaseModel):
 # ----------------------
 # 📅 Helper to generate today's date in pretty format
 # ----------------------
+
+
 def get_pretty_date():
     today = date.today()
     day = today.day
